@@ -2,11 +2,8 @@ package geo;
 import java.util.Scanner;
 
 
-public class espacial {
+public class espacial extends geometria {
     
-    public static void main (String[] args) {
-        Scanner ler = new Scanner(System.in);
-}
 
 }
 
