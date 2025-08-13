@@ -1,3 +1,4 @@
+package geo;
 import java.util.Scanner;
 
 
