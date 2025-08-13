@@ -3,4 +3,10 @@ import java.util.Scanner;
 
 public class espacial {
     
+    public static void main (String[] args) {
+        Scanner ler = new Scanner(System.in);
 }
+
+}
+
+
