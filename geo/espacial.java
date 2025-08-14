@@ -124,14 +124,14 @@ public class espacial extends geometria {
             this.raio = raio;
             this.pi = pi;
     
-            this.areaSuperficial = 4 * pi * raio;
+            this.areaSuperficial = 4 * pi * Math.pow(raio, 2);
     }
 
-    public void volumeEsfera (double pi, double raio) {
-        this.raio = raio;
-        this.pi = pi;
+        public void volumeEsfera (double pi, double raio) {
+           this.raio = raio;
+           this.pi = pi;
 
-        this.volume = 4/3 * pi * Math.pow(raio, 3);
+           this.volume = (4.0 / 3.0) * pi * Math.pow(raio, 3);
     }
 
 
