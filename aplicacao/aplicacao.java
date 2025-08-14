@@ -9,6 +9,7 @@ public class aplicacao {
     static String escolhaConta;
     static String escolhaFigura;
     static String escolhaFormula;
+    static String valores;
         public static void main(String[] args) {
             Scanner ler = new Scanner(System.in);
             
@@ -34,14 +35,19 @@ public class aplicacao {
 
             else if ("esfera".equalsIgnoreCase(escolhaFigura)) {
 
-                System.out.printf("Qual cálculo de Esfera você deseja: Área Lateral / Área Total / Volume: ");
+                System.out.printf("Qual cálculo de Esfera você deseja: Área Superficial / Volume: ");
             escolhaFormula = ler.next();
+
+            if ("Área superficial".equalsIgnoreCase(escolhaFormula)) {
+                System.out.printf("Vamos calcular a Área Superficial! Insira os valor do raio: ");
+            valores = ler.next();
+            }
 
             }
 
             else if ("cones".equalsIgnoreCase(escolhaFigura)) {
 
-                System.out.printf("Qual cálculo de Cones você deseja: Área Lateral / Área Total / Volume: ");
+                System.out.printf("Qual cálculo de Cones você deseja: Área Lateral / Área da Base / Volume: ");
             escolhaFormula = ler.next();
 
             }
@@ -55,7 +61,14 @@ public class aplicacao {
 
             else if ("cilindro".equalsIgnoreCase(escolhaFigura)) {
 
-                System.out.printf("Qual cálculo de Cilindro você deseja: Área Lateral / Área Total / Volume: ");
+                System.out.printf("Qual cálculo de Cilindro você deseja: Área da Base / Área Lateral / Volume: ");
+            escolhaFormula = ler.next();
+
+            }
+
+            else if ("prismas".equalsIgnoreCase(escolhaFigura)) {
+
+                System.out.printf("Qual cálculo de Prisma você deseja: Área Lateral / Área Total / Volume: ");
             escolhaFormula = ler.next();
 
             }
