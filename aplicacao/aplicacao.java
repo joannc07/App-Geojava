@@ -13,15 +13,15 @@ public class aplicacao {
         public static void main(String[] args) {
             Scanner ler = new Scanner(System.in);
             
-            System.out.println("Olá, seja bem-vindo!:");
-            System.out.println("Escolha qual das geometrias deseja calcular:");
+            System.out.println("\nOlá, seja bem-vindo!:");
+            System.out.println("\nEscolha qual das geometrias deseja calcular:");
 
     
             System.out.printf("Espacial / Plana: ");
             escolhaConta = ler.next();
 
             if ("espacial".equalsIgnoreCase(escolhaConta)) {
-                System.out.println("Você escolheu a Geometria Espacial.");
+                System.out.println("\nVocê escolheu a Geometria Espacial.");
             
                 System.out.printf("Qual figura você deseja calcular: Pirâmide / Esfera / Cones / Troncos / Prismas / Cilindro: ");
                 escolhaFigura = ler.next();
