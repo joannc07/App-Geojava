@@ -8,6 +8,7 @@ public class espacial extends geometria {
     public double areaBase;
     public double areaLateral;
     public double areaFaces;
+    public double numFaces;
     public double diagonal;
     public double geratriz;
     public double raioMenor;
@@ -17,121 +18,89 @@ public class espacial extends geometria {
         
     
     
-        public void areaLateralPrisma (double areaFaces) {
-            this.areaFaces = areaFaces;
-    
-            this.areaLateral = areaFaces + areaFaces;
+        public double areaLateralPrisma (double areaFaces, double numFaces, double altura) {
+            return (areaFaces * altura) * numFaces;
         }
     
-        public void areaTotalPrisma (double areaBase, double areaLateral ) {
-            this.areaBase = areaBase;
-            this.areaLateral = areaLateral;
+        public double areaTotalPrisma (double areaBase, double areaLateral ) {
+            return areaBase + areaLateral;
     
-            this.areaTotal = areaBase + areaLateral;
         }
     
     
-        public void volumePrisma (double altura, double areaBase) {
-            this.altura = altura;
-            this.areaBase = areaBase;
-    
-            this.volume = areaBase * altura;
-        }
-    
-    
-        public void areaBaseCilindro(double raio, double pi) {
-            this.pi = pi;
-            this.raio = raio;
-    
-            this.areaBase = pi * Math.pow(raio, 2); 
-        }
-    
-    
-        public void areaLateralCilindro(double raio, double pi, double altura) {
-            this.pi = pi;
-            this.raio = raio;
-            this.altura = altura;
-    
-            this.areaLateral = 2 * pi * raio * altura;
+        public double volumePrisma (double altura, double areaBase) {
+
+            return areaBase * altura;
     
     
         }
     
-        public void volumeCilindro(double raio, double pi, double altura) {
-            this.pi = pi;
-            this.raio = raio;
-            this.altura = altura;
     
-            this.volume = pi * Math.pow(raio, 2) * altura;
+        public double areaBaseCilindro(double raio, double pi) {
+            return pi * Math.pow(raio, 2); 
+    
         }
     
-        public void areaLateralPiramide (double areaTriangulo) {
-            this.areaTriangulo = areaTriangulo;
     
-            this.areaLateral = areaTriangulo + areaTriangulo;
+        public double areaLateralCilindro(double raio, double pi, double altura) {
+            return 2 * pi * raio * altura;
     
     
         }
     
-        public void areaTotalPiramide (double areaBase, double areaLateral) {
-            this.areaBase = areaBase;
-            this.areaLateral = areaLateral;
+        public double volumeCilindro(double raio, double pi, double altura) {
+            return pi * Math.pow(raio, 2) * altura;
     
-            this.areaTotal = areaBase + areaLateral;
         }
     
-        public void volumePiramide (double areaBase, double altura) {
-            this.areaBase = areaBase;
-            this.altura = altura;
+        public double areaLateralPiramide (double areaTriangulo) {
+            return areaTriangulo + areaTriangulo;
     
-            this.volume = areaBase * altura / 3;
+    
         }
     
-        public void areaLateralCone (double pi, double raio, double geratriz) {
-            this.pi = pi;
-            this.raio = raio;
-            this.geratriz = geratriz;
+        public double areaTotalPiramide (double areaBase, double areaLateral) {
+            return areaBase + areaLateral;
     
-            this.areaLateral = pi * raio * geratriz;
+            
         }
     
-        public void areaBaseCone (double pi, double raio) {
-            this.pi = pi;
-            this.raio = raio;
+        public double volumePiramide (double areaBase, double altura) {
+            return areaBase * altura / 3;
     
-            this.areaBase = pi * Math.pow(raio, 2);
+            
         }
     
-        public void volumeCone (double pi, double raio, double altura) {
-            this.pi = pi;
-            this.raio = raio;
-            this.altura = altura;
+        public double areaLateralCone (double pi, double raio, double geratriz) {
+            return pi * raio * geratriz;
     
-            this.volume = pi * Math.pow(raio, 2) * altura / 3;
+        }
+    
+        public double areaBaseCone (double pi, double raio) {
+            return pi * Math.pow(raio, 2);
+    
+        }
+    
+        public double volumeCone (double pi, double raio, double altura) {
+            return pi * Math.pow(raio, 2) * altura / 3;
+    
         }
     
     
-        public void volumeTronco (double raioMenor, double raioMaior, double pi, double altura) {
-            this.raioMaior = raioMaior;
-            this.raioMenor = raioMenor;
-            this.pi = pi;
-            this.altura = altura;
+        public double volumeTronco (double raioMenor, double raioMaior, double pi, double altura) {
+            return pi * altura * ( Math.pow(raioMenor, 2) + raioMenor * raioMaior + Math.pow(raioMaior, 2) ) / 3;
     
-            this.volume = pi * altura * ( Math.pow(raioMenor, 2) + raioMenor * raioMaior + Math.pow(raioMaior, 2) ) / 3;
         }
     
-        public void areaSuperficial (double pi, double raio) {
-            this.raio = raio;
-            this.pi = pi;
-    
-            this.areaSuperficial = 4 * pi * Math.pow(raio, 2);
+        public double areaSuperficial (double pi, double raio) {
+            return 4 * pi * Math.pow(raio, 2);
+            
     }
 
-        public void volumeEsfera (double pi, double raio) {
-           this.raio = raio;
-           this.pi = pi;
+        public double volumeEsfera (double pi, double raio) {
+           return (4.0 / 3.0) * pi * Math.pow(raio, 3);
 
-           this.volume = (4.0 / 3.0) * pi * Math.pow(raio, 3);
+
     }
 
 
