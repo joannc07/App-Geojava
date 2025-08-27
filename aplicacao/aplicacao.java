@@ -33,11 +33,15 @@ public class aplicacao {
                     if (escolhaFormula == 1) { System.out.print("Digite o perímetro da base: "); double pBase = ler.nextDouble(); 
                     System.out.print("Digite o apótema: "); double apotema = ler.nextDouble(); 
                     double resultado = espacial.areaLateralPiramide (pBase, apotema); 
-                    System.out.println("Área Lateral = " + resultado); }
+                    System.out.println("O resultado da Área Lateral é " + resultado); }
 
                     else if (2 == escolhaFormula) {
-                        System.out.printf("Vamos calcular a Área Total da Pirâmide! Insira o valor ... : ");
-                        valores = ler.nextInt();
+
+                        System.out.print("Digite a Área da Base: "); double areaBase = ler.nextDouble(); 
+                    System.out.print("Digite a Área Lateral: "); double areaLateral = ler.nextDouble(); 
+                    double resultado = espacial.areaTotalPiramide (areaBase, areaLateral); 
+                    System.out.println("O resultado da Área Total é " + resultado);
+                        
                     }
 
                     else if (3 == escolhaFormula) {
