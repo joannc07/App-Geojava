@@ -17,32 +17,32 @@ public class plana extends geometria {
         }
     
     
-        public static double volumePrisma (double altura, double areaBase) {
+        public static double perimetroRetangulo (double ladoA, double ladoB) {
 
-            return areaBase * altura;
+            return (2 * ladoA) * (2 * ladoB);
     
     
         }
     
     
-        public static double areaBaseCilindro(double raio) {
-            return 3.14 * Math.pow(raio, 2); 
+        public static double areaRetangulo(double ladoA, double ladoB) {
+            return ladoA * ladoB; 
     
         }
     
     
-        public static double areaLateralCilindro(double raio, double altura) {
-            return 2 * 3.14 * raio * altura;
+        public static double perimetroTriangulo(double ladoA, double ladoB, double ladoC, double ladoH) {
+            return ladoA+ladoB+ladoC;
     
     
         }
     
-        public static double volumeCilindro(double raio, double altura) {
-            return 3.14 * Math.pow(raio, 2) * altura;
+        public static double areaTriangulo(double ladoA, double ladoB, double ladoC, double ladoH) {
+            return (ladoA * ladoH) / 2;
     
         }
     
-        public static double areaLateralPiramide(double perimetroBase, double apotema) {
+        public static double trianguloEquilátero(double perimetroBase, double apotema) {
         return (perimetroBase * apotema) / 2;
 
         }
