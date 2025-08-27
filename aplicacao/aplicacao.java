@@ -6,9 +6,9 @@ import geo.espacial;
 
 public class aplicacao {
 
-    static String escolhaConta;
-    static String escolhaFigura;
-    static String escolhaFormula;
+    static int escolhaConta;
+    static int escolhaFigura;
+    static int escolhaFormula;
     static double valores;
         public static void main(String[] args) {
             Scanner ler = new Scanner(System.in);
@@ -17,52 +17,124 @@ public class aplicacao {
             System.out.println("\nEscolha qual das geometrias deseja calcular:");
 
     
-            System.out.printf("Espacial / Plana: ");
-            escolhaConta = ler.next();
+            System.out.printf("Espacial (1) / Plana (2) ");
+            escolhaConta = ler.nextInt();
 
-            if ("espacial".equalsIgnoreCase(escolhaConta)) {
+            if (1 == escolhaConta) {
                 System.out.println("\nVocê escolheu a Geometria Espacial.");
             
-                System.out.printf("Qual figura você deseja calcular: Pirâmide / Esfera / Cones / Troncos / Prismas / Cilindro: ");
-                escolhaFigura = ler.next();
+                System.out.printf("Qual figura você deseja calcular: Pirâmide (1) / Esfera (2) / Cones (3) / Troncos (4) / Cilindro (5) / Prismas (6) ");
+                escolhaFigura = ler.nextInt();
             
-                if ("Pirâmide".equalsIgnoreCase(escolhaFigura)) {
-                    System.out.printf("Qual cálculo de Pirâmide você deseja: Área Lateral / Área Total / Volume: ");
-                    escolhaFormula = ler.next();
-                }
-            
-                else if ("esfera".equalsIgnoreCase(escolhaFigura)) {
-                    System.out.printf("Qual cálculo de Esfera você deseja: Área Superficial / Volume: ");
-                    escolhaFormula = ler.next();
-            
-                    if ("Área superficial".equalsIgnoreCase(escolhaFormula)) {
-                        System.out.printf("Vamos calcular a Área Superficial! Insira o valor do raio: ");
-                        valores = ler.nextDouble();
+                if ( 1 == escolhaFigura) {
+                    System.out.printf("Qual cálculo de Pirâmide você deseja: Área Lateral (1) / Área Total (2) / Volume (3) ");
+                    escolhaFormula = ler.nextInt();
+
+                    if (escolhaFormula == 1) { System.out.print("Digite o perímetro da base: "); double pBase = ler.nextDouble(); 
+                    System.out.print("Digite o apótema: "); double apotema = ler.nextDouble(); 
+                    double resultado = espacial.areaLateralPiramide (pBase, apotema); 
+                    System.out.println("Área Lateral = " + resultado); }
+
+                    else if (2 == escolhaFormula) {
+                        System.out.printf("Vamos calcular a Área Total da Pirâmide! Insira o valor ... : ");
+                        valores = ler.nextInt();
+                    }
+
+                    else if (3 == escolhaFormula) {
+                        System.out.printf("Vamos calcular o Volume da Pirâmide! Insira o valor ... : ");
+                        valores = ler.nextInt();
                     }
                 }
             
-                else if ("cones".equalsIgnoreCase(escolhaFigura)) {
-                    System.out.printf("Qual cálculo de Cones você deseja: Área Lateral / Área da Base / Volume: ");
-                    escolhaFormula = ler.next();
+                else if (2 == escolhaFigura) {
+                    System.out.printf("Qual cálculo de Esfera você deseja: Área Superficial (1) / Volume (2) ");
+                    escolhaFormula = ler.nextInt();
+            
+                    if (1 == escolhaFormula) {
+                        System.out.printf("Vamos calcular a Área Superficial! Insira o valor do raio: ");
+                        valores = ler.nextInt();
+                    }
+
+                    else if (2 == escolhaFormula) {
+                        System.out.printf("Vamos calcular o Volume! Insira o valor do raio: ");
+                        valores = ler.nextInt();
+                    }
                 }
             
-                else if ("troncos".equalsIgnoreCase(escolhaFigura)) {
-                    System.out.printf("Qual cálculo de Troncos você deseja: Área Lateral / Área Total / Volume: ");
-                    escolhaFormula = ler.next();
+                else if (3 == escolhaFigura) {
+                    System.out.printf("Qual cálculo de Cones você deseja: Área Lateral (1) / Área da Base (2) / Volume (3) ");
+                    escolhaFormula = ler.nextInt();
+
+                    if (1 == escolhaFormula) {
+                        System.out.printf("Vamos calcular a Área Lateral do cone! Insira o valor ... : ");
+                        valores = ler.nextInt();
+                    }
+
+                    else if (2 == escolhaFormula) {
+                        System.out.printf("Vamos calcular a Área da Base do cone! Insira o valor ... : ");
+                        valores = ler.nextInt();
+                    }
+
+                    else if (3 == escolhaFormula) {
+                        System.out.printf("Vamos calcular o Volume do cone! Insira o valor ... : ");
+                        valores = ler.nextInt();
+                    }
                 }
             
-                else if ("cilindro".equalsIgnoreCase(escolhaFigura)) {
-                    System.out.printf("Qual cálculo de Cilindro você deseja: Área da Base / Área Lateral / Volume: ");
-                    escolhaFormula = ler.next();
+                else if (4 == escolhaFigura) {
+                    System.out.printf("Qual cálculo de Troncos você deseja: Área Lateral (1) / Área Total (2) / Volume (3) ");
+                    escolhaFormula = ler.nextInt();
+
+                    if (1 == escolhaFormula) {
+                        System.out.printf("Vamos calcular a Área Superficial! Insira o valor do raio: ");
+                        valores = ler.nextInt();
+                    }
                 }
             
-                else if ("prismas".equalsIgnoreCase(escolhaFigura)) {
-                    System.out.printf("Qual cálculo de Prisma você deseja: Área Lateral / Área Total / Volume: ");
-                    escolhaFormula = ler.next();
+                else if (5 == escolhaFigura) {
+                    System.out.printf("Qual cálculo de Cilindro você deseja: Área da Base (1) / Área Lateral (2) / Volume (3) ");
+                    escolhaFormula = ler.nextInt();
+
+                    if (1 == escolhaFormula) {
+                        System.out.printf("Vamos calcular a Área da Base do cilindro! Insira o valor ... : ");
+                        valores = ler.nextInt();
+                    }
+
+                    else if (2 == escolhaFormula) {
+                        System.out.printf("Vamos calcular a Área Lateral do cilindro! Insira o valor ... : ");
+                        valores = ler.nextInt();
+                    }
+
+                    else if (3 == escolhaFormula) {
+                        System.out.printf("Vamos calcular o Volume do cilindro! Insira o valor ... : ");
+                        valores = ler.nextInt();
+                    }
+                }
+            
+                else if (6 == escolhaFigura) {
+                    System.out.printf("Qual cálculo de Prisma você deseja: Área Lateral (1) / Área Total (2) / Volume (3) ");
+                    escolhaFormula = ler.nextInt();
+
+                    if (1 == escolhaFormula) {
+                        System.out.printf("Vamos calcular a Área Lateral do Prisma! Insira o valor ... : ");
+                        valores = ler.nextInt();
+                    }
+
+                    else if (2 == escolhaFormula) {
+                        System.out.printf("Vamos calcular a Área Total do Prisma! Insira o valor ... : ");
+                        valores = ler.nextInt();
+                    }
+
+                    else if (3 == escolhaFormula) {
+                        System.out.printf("Vamos calcular o Volume do Prisma! Insira o valor ... : ");
+                        valores = ler.nextInt();
+                    }
+
+                    
                 }
             }
             
-            else if ("plana".equalsIgnoreCase(escolhaConta)) {
+            else if (2 == escolhaConta) {
                 System.out.println("Você escolheu a Geometria Plana.");
             }
 

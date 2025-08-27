@@ -53,10 +53,9 @@ public class espacial extends geometria {
     
         }
     
-        public double areaLateralPiramide (double areaTriangulo) {
-            return areaTriangulo + areaTriangulo;
-    
-    
+        public static double areaLateralPiramide(double perimetroBase, double apotema) {
+        return (perimetroBase * apotema) / 2;
+
         }
     
         public double areaTotalPiramide (double areaBase, double areaLateral) {
