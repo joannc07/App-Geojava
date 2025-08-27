@@ -30,11 +30,11 @@ public class aplicacao {
             else if (1 == escolhaConta) {
                 System.out.println("\nVocê escolheu a Geometria Espacial.");
             
-                System.out.printf("Qual figura você deseja calcular: Pirâmide (1) / Esfera (2) / Cones (3) / Troncos (4) / Cilindro (5) / Prismas (6) / Sair (0) ");
+                System.out.printf("\nQual figura você deseja calcular: Pirâmide (1) / Esfera (2) / Cones (3) / Troncos (4) / Cilindro (5) / Prismas (6) / Sair (0) ");
                 escolhaFigura = ler.nextInt();
 
         
-                if (0 == escolhaFormula) {
+                if (0 == escolhaFigura) {
                     System.out.println("Programa encerrado. Até mais!");
                     break; 
                 }
