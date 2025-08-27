@@ -30,7 +30,9 @@ public class aplicacao {
                     System.out.printf("Qual cálculo de Pirâmide você deseja: Área Lateral (1) / Área Total (2) / Volume (3) ");
                     escolhaFormula = ler.nextInt();
 
-                    if (escolhaFormula == 1) { System.out.print("Digite o perímetro da base: "); double pBase = ler.nextDouble(); 
+                    if (escolhaFormula == 1) { 
+                        
+                        System.out.print("Digite o perímetro da base: "); double pBase = ler.nextDouble(); 
                     System.out.print("Digite o apótema: "); double apotema = ler.nextDouble(); 
                     double resultado = espacial.areaLateralPiramide (pBase, apotema); 
                     System.out.println("O resultado da Área Lateral é " + resultado); }
@@ -45,8 +47,13 @@ public class aplicacao {
                     }
 
                     else if (3 == escolhaFormula) {
-                        System.out.printf("Vamos calcular o Volume da Pirâmide! Insira o valor ... : ");
-                        valores = ler.nextInt();
+
+                        System.out.print("Digite a Área da Base: "); double areaBase = ler.nextDouble(); 
+                    System.out.print("Digite a Altura: "); double altura = ler.nextDouble(); 
+                    double resultado = espacial.volumePiramide (areaBase, altura); 
+                    System.out.println("O resultado do Volume é " + resultado);
+
+
                     }
                 }
             
@@ -55,13 +62,23 @@ public class aplicacao {
                     escolhaFormula = ler.nextInt();
             
                     if (1 == escolhaFormula) {
-                        System.out.printf("Vamos calcular a Área Superficial! Insira o valor do raio: ");
-                        valores = ler.nextInt();
+
+
+                        System.out.print("Digite o Raio: "); double raio = ler.nextDouble(); 
+                    double resultado = espacial.areaSuperficial (raio); 
+                    System.out.println("O resultado da Área Superficial é " + resultado);
+
                     }
 
+
+
+
                     else if (2 == escolhaFormula) {
-                        System.out.printf("Vamos calcular o Volume! Insira o valor do raio: ");
-                        valores = ler.nextInt();
+
+                        System.out.print("Digite o Raio: "); double raio = ler.nextDouble(); 
+                    double resultado = espacial.volumeEsfera(raio); 
+                    System.out.println("O resultado do Volume é " + resultado);
+
                     }
                 }
             

@@ -80,13 +80,13 @@ public class espacial extends geometria {
     
         }
     
-        public static double areaSuperficial (double pi, double raio) {
-            return 4 * pi * Math.pow(raio, 2);
+        public static double areaSuperficial (double raio) {
+            return 4 * 3.14 * Math.pow(raio, 2);
             
     }
 
-        public static double volumeEsfera (double pi, double raio) {
-           return (4.0 / 3.0) * pi * Math.pow(raio, 3);
+        public static double volumeEsfera (double raio) {
+           return (4.0 / 3.0) * 3.14 * Math.pow(raio, 3);
 
 
     }
