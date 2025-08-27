@@ -7,12 +7,12 @@ public class plana extends geometria {
         
     
     
-        public static double areaLateralPrisma (double areaFaces, double numFaces, double altura) {
-            return (areaFaces * altura) * numFaces;
+        public static double perimetroQuadrado (double lado) {
+            return 4*lado;
         }
     
-        public static double areaTotalPrisma (double areaBase, double areaLateral ) {
-            return areaBase + areaLateral;
+        public static double areaQuadrado (double lado ) {
+            return Math.pow(lado, 2);
     
         }
     
