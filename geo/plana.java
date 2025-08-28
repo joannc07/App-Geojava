@@ -42,7 +42,7 @@ public class plana extends geometria {
         return a * altura;
     }
 
-    public static double perimetroLosangulo(double lados, double diagonalMaior, double diagonalMenor) {
+    public static double perimetroLosangulo(double lados) {
         return 4 * lados;
     }
 
@@ -50,7 +50,7 @@ public class plana extends geometria {
         return (diametroMaior * diametroMenor) / 2;
     }
 
-    public static double perimetroTrapezio(double baseMaior, double baseMenor, double ladoC, double ladoD, double altura) {
+    public static double perimetroTrapezio(double baseMaior, double baseMenor, double ladoC, double ladoD) {
         return baseMaior + baseMenor + ladoC + ladoD;
     }
 

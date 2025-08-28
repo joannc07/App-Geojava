@@ -401,9 +401,7 @@ public class aplicacao {
                     if (1 == escolhaFormula) {
 
                         System.out.print("Digite o lado: "); double lados = ler.nextDouble(); 
-                        System.out.print("Digite a Diagonal maior: "); double diagonalMaior = ler.nextDouble();
-                        System.out.print("Digite a Diagonal menor: "); double diagonalMenor = ler.nextDouble();
-                        double resultado = plana.perimetroLosangulo(lados, diagonalMaior, diagonalMenor); 
+                        double resultado = plana.perimetroLosangulo(lados); 
                         System.out.println("O resultado do Perímetro é " + resultado);
                     }
 
@@ -429,11 +427,11 @@ public class aplicacao {
 
                         if (1 == escolhaFormula) {
 
-                            System.out.print("Digite o lado: "); double lados = ler.nextDouble(); 
+                         
                         System.out.print("Digite a Base Maior: "); double baseMaior = ler.nextDouble();
                         System.out.print("Digite a Base Menor: "); double baseMenor = ler.nextDouble();
                         System.out.print("Digite a Altura: "); double altura = ler.nextDouble();
-                        double resultado = plana.areaDoTrapezio(baseMaior, baseMenor, altura); 
+                        double resultado = plana.areaDoTrapezio( baseMaior, baseMenor, altura); 
                         System.out.println("O resultado da Área é " + resultado);
 
                         }
@@ -445,8 +443,7 @@ public class aplicacao {
                             System.out.print("Digite o lado D: "); double ladoD = ler.nextDouble(); 
                         System.out.print("Digite a Base Maior: "); double baseMaior = ler.nextDouble();
                         System.out.print("Digite a Base Menor: "); double baseMenor = ler.nextDouble();
-                        System.out.print("Digite a Altura: "); double altura = ler.nextDouble();
-                        double resultado = plana.perimetroTrapezio(baseMaior, baseMenor, ladoC, ladoD, altura); 
+                        double resultado = plana.perimetroTrapezio(baseMaior, baseMenor, ladoC, ladoD); 
                         System.out.println("O resultado do Perímetro é " + resultado);
                         
                         }
