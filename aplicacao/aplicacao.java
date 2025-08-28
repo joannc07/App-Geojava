@@ -239,7 +239,7 @@ public class aplicacao {
             }
             
             else if (escolhaConta == 2) {
-            System.out.println("Você escolheu a Geometria Plana.");
+            System.out.println("\nVocê escolheu a Geometria Plana.");
             System.out.printf("\nQual figura você deseja calcular: Quadrado (1) / Retângulo (2) / Triângulo (3) / Triângulo Equilátero (4) / Paralelogramo (5) / Losango (6) / Trapézio (7) / Circunferência (8) / Sair (0) ");
             escolhaFigura = ler.nextInt();
 
