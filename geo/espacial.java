@@ -71,7 +71,7 @@ public class espacial extends geometria {
     
         public static double volumeCone ( double raio, double altura) {
             return 3.14 * Math.pow(raio, 2) * altura / 3;
-    
+            
         }
     
     
