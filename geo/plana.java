@@ -2,15 +2,39 @@ package geo;
 
 public class plana extends geometria {
 
-    public static double perimetroTrianguloEquilatero(double lado, double h) {
+    public static double areaQuadrado(double lado) {
+        return lado * lado;
+    }
+
+    public static double perimetroQuadrado(double lado) {
+        return 4 * lado;
+    }
+
+    public static double areaRetangulo(double ladoA, double ladoB) {
+        return ladoA * ladoB;
+    }
+
+    public static double perimetroRetangulo(double ladoA, double ladoB) {
+        return 2 * ladoA + ladoB * 2;
+    }
+
+    public static double areaTriangulo (double ladoA, double h) {
+        return ladoA * h / 2;
+    }
+
+    public static double perimetroTriangulo (double ladoA, double ladoB, double ladoC) {
+        return ladoA + ladoB + ladoC;
+    }
+
+    public static double perimetroTrianguloEquilatero(double lado) {
         return 3 * lado;
     }
 
-    public static double areaTrianguloEquilatero(double lado, double h) {
+    public static double areaTrianguloEquilatero(double lado) {
         return (Math.pow(lado, 2) * Math.sqrt(3)) / 4;
     }
 
-    public static double perimetroParalelogramo(double a, double b, double altura) {
+    public static double perimetroParalelogramo(double a, double b) {
         return 2 * a + 2 * b;
     }
 

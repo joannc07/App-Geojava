@@ -3,6 +3,7 @@ package aplicacao;
 import java.util.Scanner;
 
 import geo.espacial;
+import geo.plana;
 
 public class aplicacao {
 
@@ -239,19 +240,269 @@ public class aplicacao {
             
             else if (2 == escolhaConta) {
                 System.out.println("Você escolheu a Geometria Plana.");
+
+                
+                System.out.printf("\nQual figura você deseja calcular: Quadrado (1) / Retângulo (2) / Triângulo (3) / Triângulo Equilátero (4) / Paralelogramo (5) / Losango (6) / Trapézio (7) / Circunferência (8) /Sair (0) ");
+                escolhaFigura = ler.nextInt();
+
+        
+                if (0 == escolhaFigura) {
+                    System.out.println("Programa encerrado. Até mais!");
+                    break; 
+                }
+
+                else if ( 1 == escolhaFigura) {
+                    System.out.printf("Qual cálculo de Quadrado você deseja: Perímetro (1) / Área (2) / Sair (0) ");
+                    escolhaFormula = ler.nextInt();
+
+                    
+
+                    if (escolhaFormula == 1) { 
+                        
+                        System.out.print("Digite o Lado: "); double lado = ler.nextDouble(); 
+                        double resultado = plana.perimetroQuadrado (lado); 
+                        System.out.println("O resultado do Perímetro é " + resultado); 
+                    }
+
+                    else if (2 == escolhaFormula) {
+
+                        System.out.print("Digite o Lado: "); double lado = ler.nextDouble(); 
+                        double resultado = plana.areaQuadrado (lado); 
+                        System.out.println("O resultado da Área é " + resultado);
+                        
+                    }
+
+        
+                    else if (0 == escolhaFormula) {
+                        System.out.println("Programa encerrado. Até mais!");
+                        break; 
+                    }
+                }
+            
+                else if (2 == escolhaFigura) {
+                    System.out.printf("Qual cálculo de Retângulo você deseja: Área (1) / Perímetro (2) / Sair (0) ");
+                    escolhaFormula = ler.nextInt();
+            
+                    if (1 == escolhaFormula) {
+
+
+                        System.out.print("Digite o lado A: "); double ladoA = ler.nextDouble(); 
+                        System.out.print("Digite o lado B: "); double ladoB = ler.nextDouble(); 
+                        double resultado = plana.areaRetangulo (ladoA, ladoB); 
+                        System.out.println("O resultado da Área é " + resultado);
+
+                    }
+
+
+
+
+                    else if (2 == escolhaFormula) {
+
+                        System.out.print("Digite o lado A: "); double ladoA = ler.nextDouble(); 
+                        System.out.print("Digite o lado B: "); double ladoB = ler.nextDouble(); 
+                        double resultado = plana.perimetroRetangulo (ladoA, ladoB); 
+                        System.out.println("O resultado do Perímetro é " + resultado);
+
+
+                    }
+
+                    else if (0 == escolhaFormula) {
+                        System.out.println("Programa encerrado. Até mais!");
+                        break; 
+                    }
+                }
+            
+                else if (3 == escolhaFigura) {
+                    System.out.printf("Qual cálculo de Triângulo você deseja: Perímetro (1) / Área (2) /  Sair (0) ");
+                    escolhaFormula = ler.nextInt();
+
+                    if (1 == escolhaFormula) {
+
+                        System.out.print("Digite o lado A: "); double ladoA = ler.nextDouble(); 
+                        System.out.print("Digite o lado B: "); double ladoB = ler.nextDouble(); 
+                        System.out.print("Digite o lado C: "); double ladoC = ler.nextDouble(); 
+                        double resultado = plana.perimetroTriangulo (ladoA, ladoB, ladoC); 
+                        System.out.println("O resultado do Perímetro é " + resultado);
+
+                    }
+
+                    else if (2 == escolhaFormula) {
+
+                        System.out.print("Digite o lado A: "); double ladoA = ler.nextDouble(); 
+                        System.out.print("Digite a altura: "); double h = ler.nextDouble();
+                        double resultado = plana.areaTriangulo (ladoA, h); 
+                        System.out.println("O resultado da Área é " + resultado);
+
+                    }
+
+
+                    else if (0 == escolhaFormula) {
+                        System.out.println("Programa encerrado. Até mais!");
+                        break; 
+                    }
+                }
+            
+                else if (4 == escolhaFigura) {
+                    System.out.printf("Qual cálculo de Triângulo Equilátero você deseja: Perímetro (1) / Área (2) / Sair (0) ");
+                    escolhaFormula = ler.nextInt();
+
+                    if (1 == escolhaFormula) {
+
+                        System.out.print("Digite o lado: "); double lado = ler.nextDouble(); 
+                        double resultado = plana.perimetroTrianguloEquilatero(lado); 
+                        System.out.println("O resultado do Perímetro é " + resultado);
+                    }
+
+                    if (2 == escolhaFormula) {
+
+                        System.out.print("Digite o lado: "); double lado = ler.nextDouble(); 
+                        double resultado = plana.areaTrianguloEquilatero(lado); 
+                        System.out.println("O resultado da Área é " + resultado);
+                    }
+
+
+                    else if (0 == escolhaFormula) {
+                        System.out.println("Programa encerrado. Até mais!");
+                        break; 
+                    }
+                }
+            
+                else if (5 == escolhaFigura) {
+                    System.out.printf("Qual cálculo de Paralelogramo você deseja: Área (1) / Perímetro (2) / Sair (0) ");
+                    escolhaFormula = ler.nextInt();
+
+                    if (1 == escolhaFormula) {
+
+                        System.out.print("Digite o lado A: "); double a = ler.nextDouble(); 
+                        System.out.print("Digite a altura: "); double altura = ler.nextDouble();
+                        double resultado = plana.areaParalelogramo(a, altura); 
+                        System.out.println("O resultado da Área é " + resultado);
+                    }
+
+                    else if (2 == escolhaFormula) {
+
+                        System.out.print("Digite o lado A: "); double a = ler.nextDouble(); 
+                        System.out.print("Digite o lado B: "); double b = ler.nextDouble();
+                        double resultado = plana.perimetroParalelogramo(a, b); 
+                        System.out.println("O resultado do Perímetro é " + resultado);
+                    }
+
+
+                    else if (0 == escolhaFormula) {
+                        System.out.println("Programa encerrado. Até mais!");
+                        break; 
+                    }
+                }
+            
+                else if (6 == escolhaFigura) {
+                    System.out.printf("Qual cálculo de Losango você deseja: Perímetro (1) / Área (2) / Sair (0) ");
+                    escolhaFormula = ler.nextInt();
+
+                    if (1 == escolhaFormula) {
+
+                        System.out.print("Digite o lado: "); double lados = ler.nextDouble(); 
+                        System.out.print("Digite a Diagonal maior: "); double diagonalMaior = ler.nextDouble();
+                        System.out.print("Digite a Diagonal menor: "); double diagonalMenor = ler.nextDouble();
+                        double resultado = plana.perimetroLosangulo(lados, diagonalMaior, diagonalMenor); 
+                        System.out.println("O resultado do Perímetro é " + resultado);
+                    }
+
+                    else if (2 == escolhaFormula) {
+
+                        System.out.print("Digite a Diagonal maior: "); double diagonalMaior = ler.nextDouble();
+                        System.out.print("Digite a Diagonal menor: "); double diagonalMenor = ler.nextDouble();
+                        double resultado = plana.areaLosangulo(diagonalMaior, diagonalMenor); 
+                        System.out.println("O resultado da Área é " + resultado);
+                    }
+
+
+
+                    else if (0 == escolhaFormula) {
+                        System.out.println("Programa encerrado. Até mais!");
+                        break; 
+                    }
+
+
+                    else if (7 == escolhaFigura) {
+                        System.out.printf("Qual cálculo de Trapézio você deseja: Área (1) / Perímetro (2) / Sair (0) ");
+                        escolhaFormula = ler.nextInt();
+
+                        if (1 == escolhaFormula) {
+
+                            System.out.print("Digite o lado: "); double lados = ler.nextDouble(); 
+                        System.out.print("Digite a Base Maior: "); double baseMaior = ler.nextDouble();
+                        System.out.print("Digite a Base Menor: "); double baseMenor = ler.nextDouble();
+                        System.out.print("Digite a Altura: "); double altura = ler.nextDouble();
+                        double resultado = plana.areaDoTrapezio(baseMaior, baseMenor, altura); 
+                        System.out.println("O resultado da Área é " + resultado);
+
+                        }
+
+
+                        else if (2 == escolhaFormula) {
+
+                            System.out.print("Digite o lado C: "); double ladoC = ler.nextDouble(); 
+                            System.out.print("Digite o lado D: "); double ladoD = ler.nextDouble(); 
+                        System.out.print("Digite a Base Maior: "); double baseMaior = ler.nextDouble();
+                        System.out.print("Digite a Base Menor: "); double baseMenor = ler.nextDouble();
+                        System.out.print("Digite a Altura: "); double altura = ler.nextDouble();
+                        double resultado = plana.perimetroTrapezio(baseMaior, baseMenor, ladoC, ladoD, altura); 
+                        System.out.println("O resultado do Perímetro é " + resultado);
+                        
+                        }
+
+                        else if (0 == escolhaFormula) {
+                            System.out.println("Programa encerrado. Até mais!");
+                            break; 
+                        }
+
+                        else if (8 == escolhaFigura) {
+                            System.out.printf("Qual cálculo de Circunferência você deseja: Área (1) / comprimento (2) / Sair (0) ");
+                            escolhaFormula = ler.nextInt();
+
+
+                            if (1 == escolhaFormula) {
+
+                                System.out.print("Digite o Raio: "); double raio = ler.nextDouble();
+                                double resultado = plana.circunferenciaCirculo(raio); 
+                                System.out.println("O resultado do Comprimento é " + resultado);
+                            }
+    
+    
+                            else if (2 == escolhaFormula) {
+    
+                                System.out.print("Digite o Raio: "); double raio = ler.nextDouble();
+                                double resultado = plana.areaDoCirculo(raio); 
+                                System.out.println("O resultado da Área é " + resultado);
+                            }
+
+                        }
+
+                        else if (0 == escolhaFormula) {
+                            System.out.println("Programa encerrado. Até mais!");
+                            break; 
+                        }
+
+
+                        
+
+
+
+                    }
+
+
+
+                    
+                }
             }
+            
 
             else if (3 >= escolhaConta) {
                 System.out.println("Escolha inválida.");
                 break;
             }
 
-
-
-
 }
-
-
     
         }
 
